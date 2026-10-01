@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: bayline
+      POSTGRES_PASSWORD: bayline
+      POSTGRES_DB: bayline
+    ports:
+      - "5432:5432"
+    volumes:
+      - bayline-pg:/var/lib/postgresql/data
+
+volumes:
+  bayline-pg:

@@ -1,0 +1,16 @@
+{
+  "name": "bayline",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w api",
+    "test": "npm test -w api",
+    "migrate": "npm run migrate -w api"
+  }
+}
