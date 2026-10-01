@@ -9,8 +9,11 @@
     "web"
   ],
   "scripts": {
-    "dev": "npm run dev -w api",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w api\" \"npm run dev -w web\"",
     "test": "npm test -w api",
     "migrate": "npm run migrate -w api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
